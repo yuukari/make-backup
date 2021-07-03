@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make-backup", "make-backup\make-backup.csproj", "{6E010264-BD98-4B04-A56C-5C8E4C4C0AE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E010264-BD98-4B04-A56C-5C8E4C4C0AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E010264-BD98-4B04-A56C-5C8E4C4C0AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E010264-BD98-4B04-A56C-5C8E4C4C0AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E010264-BD98-4B04-A56C-5C8E4C4C0AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A91902CD-51A4-4092-925C-AB2DB3C3509E}
+	EndGlobalSection
+EndGlobal

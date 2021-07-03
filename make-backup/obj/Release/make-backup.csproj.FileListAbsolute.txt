@@ -1,0 +1,7 @@
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\bin\Release\make-backup.exe.config
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\bin\Release\make-backup.exe
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\bin\Release\make-backup.pdb
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\obj\Release\make-backup.csprojAssemblyReference.cache
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\obj\Release\make-backup.csproj.CoreCompileInputs.cache
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\obj\Release\make-backup.exe
+C:\Users\Yuukari\Desktop\Dev\C#\make-backup\make-backup\obj\Release\make-backup.pdb
