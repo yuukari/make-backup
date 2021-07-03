@@ -4,7 +4,9 @@
 
 make-backup is a simple CLI utility for creating backups on MEGA drive. It creates a 7Zip archive and upload it on your MEGA drive in "Backups" folder.
 
-This utility requires MEGAcmd client and 7Zip archiver installed. The 7Zip archiver binary "7z.exe" must be added in PATH environment variable.
+## Requirements
+
+This utility requires MEGAcmd client and 7Zip archiver installed. The 7Zip archiver binary "7z.exe" must be added in PATH environment variable. Also, .NET framework 4.6.1+ need to be installed
 
 ## Usage
 
@@ -25,7 +27,7 @@ This utility requires MEGAcmd client and 7Zip archiver installed. The 7Zip archi
   ```
   Your backup archive will be named like "DifferentProjectName-03_07_2021-18_21_05.7z"
   
-+ You can also log out of your account if you want:
++ You can also log out from your account if you want:
 
   ```
   > make-backup --logout
