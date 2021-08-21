@@ -21,6 +21,11 @@ This utility requires MEGAcmd client and 7Zip archiver installed. The 7Zip archi
   ```
   > make-backup --backup C:\path\to\your\project
   ```
+  Or use short backup command syntax:
+  ```
+  > make-backup C:\path\to\your\project
+  ```
+ 
   You can also specify the project name that be used in backup archive name:
   ```
   > make-backup --backup C:\path\to\your\project DifferentProjectName
