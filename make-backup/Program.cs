@@ -8,11 +8,12 @@ namespace MakeBackup
     {
         static int Main(string[] args)
         {
-            Console.WriteLine("make-backup 1.0.0 by Yuukari - CLI utility for creating backups on MEGA drive");
+            Console.WriteLine("make-backup 1.0.1 by Yuukari - CLI utility for creating backups on MEGA drive\r\n");
 
             if (args.Length < 1) 
             {
                 Console.WriteLine("Use: make-backup [--auth|--backup|--logout|--help]");
+                Console.WriteLine("Quick project backup: make-backup [project directory path]");
                 return 0;
             }
 
@@ -25,13 +26,20 @@ namespace MakeBackup
             string action = args[0];
             int returnCode = 0;
 
+            if (Directory.Exists(action))
+                return backup(new string[2]{"--backup", args[0]});
+
             switch (action)
             {
                 case "--auth": returnCode = auth(args); break;
                 case "--backup": returnCode = backup(args); break;
                 case "--logout": returnCode = logout(); break;
                 case "--help": help(); break;
-                default: Console.WriteLine("Use: make-backup [--auth|--backup|--logout|--help]"); break;
+
+                default: 
+                    Console.WriteLine("Use: make-backup [--auth|--backup|--logout|--help]");
+                    Console.WriteLine("Quick project backup: make-backup [project directory path]");
+                break;
             }
 
             return returnCode;
@@ -227,7 +235,7 @@ namespace MakeBackup
 
             string backupPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Temp\\" + projectFilename;
 
-            Process _7z = get7Zip("a -xr!.next -xr!node_modules " + backupPath + " " + projectDirectory, true);
+            Process _7z = get7Zip("a -xr!.next -xr!node_modules \"" + backupPath + "\" \"" + projectDirectory + "\"", true);
             _7z.Start();
             _7z.WaitForExit();
 
@@ -278,11 +286,13 @@ namespace MakeBackup
 
         static void help()
         {
-            Console.WriteLine("\r\nThis utility requires MEGAcmd client and 7Zip archiver installed on your computer");
+            Console.WriteLine("This utility requires MEGAcmd client and 7Zip archiver installed on your computer");
             Console.WriteLine("The 7Zip archiver binary \"7z.exe\" must be added in PATH environment variable");
+
             Console.WriteLine("\r\nUsage: ");
             Console.WriteLine("> make-backup --auth [username] [password] - Authorize in your MEGA account");
             Console.WriteLine("> make-backup --backup [project directory path] {project name} - Backup your project on MEGA drive. Backups saved in \"Backups\" folder in root on your drive");
+            Console.WriteLine("> make-backup [project directory path] - Short backup command syntax");
             Console.WriteLine("> make-backup --logout - Logout from your MEGA account");
             Console.WriteLine("> make-backup --help - Print this help");
         }
